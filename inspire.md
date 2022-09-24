@@ -11,5 +11,5 @@ _"You only live once, but if you do it right, once is enough."_
 > - "Sleepless nights lead to days like dreams"
 > - "I do not know what sin is but I'm sure I have commited it"
 > - "Making new dreams is a job for children manifesting them is now you're job"
-'print("hello world")'
+`print("hello world")`
 
