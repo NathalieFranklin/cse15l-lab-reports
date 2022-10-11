@@ -18,17 +18,20 @@ This step is pretty simple, it just there to get you familiae with basic command
 *cat : print the content of file
 *scp : copy a file from one server to another
 *ls : get a list of the content in the current directory
+
 ![Image](step3.png)
 
 ---
 **Step 4: Moving Files with scp**
-This is a simple command that requires two arguments the first is the address in the current server where the file is and second the server 
-address where it should be tranferred. Note you will need your server password for this command to go through.
+Scp is a simple command that requires two arguments the first is the address in the current server where the file is and second the server 
+address where it should be tranferred. Note you will need your server password for this command to go through. Here I am moving a WhereAmI.java from the current directory to one in the remote servers home by providing my course specific acount name fallowed by :~/
+
+
 ![Image](step4.png)
 
 ---
 **Step 5: Setting an SSH Key**
-A useful trick is being able to login to a private server without constantly putting in a new password. To do so you must put in 
+ssh-keygen is when we create two files one that is public key and is saved in the local server and another that is an identifcication that is saved in the remote server. When you try to login to the remote server the files communicate in order to verify who you are. It useful trick is being able to login to a private server without constantly putting in a new password. To do so you must put in 
 ```
 # on client (your computer)
 $ ssh-keygen
@@ -53,7 +56,9 @@ The key's randomart image is:
 |             ..  |
 +----[SHA256]-----+
 ```
-Make sure to put in your address inplace of the one above
+Make sure to put in your address inplace of the one above. 
+
+
 ![Image](step5.png)
 
 ---
