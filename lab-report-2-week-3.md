@@ -83,8 +83,9 @@ Caused by: java.lang.AssertionError: expected:<4> but was:<0>
 FAILURES!!!
 
 ---
-```
+
 The bug (the code fix needed):   
+```
 static int[] reversed(int[] arr) {
     int[] newArray = new int[arr.length];
     for(int i = 0; i < arr.length; i += 1) {
@@ -103,3 +104,62 @@ static int[] reversed(int[] arr) {
 Then, explain the connection between the symptom and the bug. Why does the bug cause that particular symptom for that particular input?
 *The right array wasn't being returned or assigned instead we were getting the empty array. The empty array is only the invese of an empty array and thus we had the bug where the inverse of the array I passed in did not match the one that was returned.*
 
+---
+
+2. LinkedListExample
+The failure-inducing input (the code of the test):
+```
+@Test
+public void testLinkedList() {
+    LinkedList  link = new LinkedList();
+    link.append(5);
+    link.append(3);
+    link.append(4);
+    link.append(1);
+    
+    assertEquals( link.length(), 4);
+	}
+---
+
+The symptom (the failing test output): 
+```
+JUnit version 4.13.2
+.E
+Time: 107.606
+There was 1 failure:
+1) testLinkedList(LinkedListTests)
+java.lang.OutOfMemoryError: Java heap space
+        at LinkedList.append(LinkedListExample.java:43)
+        at LinkedListTests.testLinkedList(LinkedListTests.java:10)
+
+FAILURES!!!
+Tests run: 1,  Failures: 1
+
+---
+
+The bug (the code fix needed): 
+```
+public void append(int value) {
+        if(this.root == null) {
+            this.root = new Node(value, null);
+            return;
+        }
+        // If it's just one element, add if after that one
+        Node n = this.root;
+        if(n.next == null) {
+            n.next = new Node(value, null);
+            return;
+        }
+        // Otherwise, loop until the end and add at the end with a null
+        while(n.next != null) {
+            n = n.next;
+            //n.next = new Node(value, null); remove from while loop
+        }
+	n.next = new Node(value, null);
+    }
+```
+---
+
+Then, explain the connection between the symptom and the bug. Why does the bug cause that particular symptom for that particular input?
+
+*The symptom is a by products when the linkedlist has more then two elements ( as in my case with 4 elements) then it enters an infinite while loop apending the same element over and over again. This leads to the program running until it runs out of memory.*
