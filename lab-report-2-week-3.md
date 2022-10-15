@@ -51,14 +51,14 @@ If those values change, how they change by the time the request is done processi
 **Step.2**
 1. The ArrayExamples file
 The failure-inducing input (the code of the test):
-`
+```
 @Test 
 	public void testReversed2() {
     int[] input1 = {1,2,3,4};
     System.out.print(input1);
     assertArrayEquals(new int[]{4,3,2,1},  ArrayExamples.reversed(input1));
 	}
-`
+```
 ---
 
 The symptom (the failing test output):
@@ -83,7 +83,7 @@ Caused by: java.lang.AssertionError: expected:<4> but was:<0>
 FAILURES!!!
 
 ---
-`
+```
 The bug (the code fix needed):   
 static int[] reversed(int[] arr) {
     int[] newArray = new int[arr.length];
@@ -92,7 +92,8 @@ static int[] reversed(int[] arr) {
       System.out.print(newArray[arr.length - i - 1]);
       
     }
-    return newArray; `
+    return newArray; 
+    ```
     
   As you see here newArray with reverse numbers is returned instead of old array arr and the newArray gets assigned to the value of the old array not vise versa.
   
