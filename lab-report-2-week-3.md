@@ -46,4 +46,53 @@ If those values change, how they change by the time the request is done processi
 ---
 ![image](lab3-3.png)
 
+---
+---
+**Step.2**
+1. The ArrayExamples file
+The failure-inducing input (the code of the test):
+`
+@Test 
+	public void testReversed2() {
+    int[] input1 = {1,2,3,4};
+    System.out.print(input1);
+    assertArrayEquals(new int[]{4,3,2,1},  ArrayExamples.reversed(input1));
+	}
+`
+The symptom (the failing test output):
+3) testReversed2(ArrayTests)
+arrays first differed at element [0]; expected:<4> but was:<0>
+        at org.junit.internal.ComparisonCriteria.arrayEquals(ComparisonCriteria.java:78)
+        at org.junit.internal.ComparisonCriteria.arrayEquals(ComparisonCriteria.java:28)
+        at org.junit.Assert.internalArrayEquals(Assert.java:534)
+        at org.junit.Assert.assertArrayEquals(Assert.java:418)
+        at org.junit.Assert.assertArrayEquals(Assert.java:429)
+        at ArrayTests.testReversed2(ArrayTests.java:28)
+        ... 32 trimmed
+Caused by: java.lang.AssertionError: expected:<4> but was:<0>
+        at org.junit.Assert.fail(Assert.java:89)
+        at org.junit.Assert.failNotEquals(Assert.java:835)
+        at org.junit.Assert.assertEquals(Assert.java:120)
+        at org.junit.Assert.assertEquals(Assert.java:146)
+        at org.junit.internal.ExactComparisonCriteria.assertElementsEqual(ExactComparisonCriteria.java:8)
+        at org.junit.internal.ComparisonCriteria.arrayEquals(ComparisonCriteria.java:76)
+        ... 38 more
+
+FAILURES!!!
+
+`The bug (the code fix needed):   
+static int[] reversed(int[] arr) {
+    int[] newArray = new int[arr.length];
+    for(int i = 0; i < arr.length; i += 1) {
+      newArray[arr.length - i - 1] =arr[i];
+      System.out.print(newArray[arr.length - i - 1]);
+      
+    }
+    return newArray;
+    `
+    
+  As you see here newArray with reverse numbers is returned instead of old array arr and the newArray gets assigned to the value of the old array not vise versa.
+
+Then, explain the connection between the symptom and the bug. Why does the bug cause that particular symptom for that particular input?
+The right array wasn't being returned or assigned instead we were getting the empty array. The empty array is only the invese of an empty array and thus we had the bug where the inverse of the array I passed in did not match the one that was returned. 
 
