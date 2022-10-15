@@ -92,8 +92,7 @@ static int[] reversed(int[] arr) {
       System.out.print(newArray[arr.length - i - 1]);
       
     }
-    return newArray; 
-    ```
+    return newArray; ```
     
   As you see here newArray with reverse numbers is returned instead of old array arr and the newArray gets assigned to the value of the old array not vise versa.
   
