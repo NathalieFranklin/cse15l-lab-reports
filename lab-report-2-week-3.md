@@ -59,6 +59,8 @@ The failure-inducing input (the code of the test):
     assertArrayEquals(new int[]{4,3,2,1},  ArrayExamples.reversed(input1));
 	}
 `
+---
+
 The symptom (the failing test output):
 3) testReversed2(ArrayTests)
 arrays first differed at element [0]; expected:<4> but was:<0>
@@ -80,7 +82,9 @@ Caused by: java.lang.AssertionError: expected:<4> but was:<0>
 
 FAILURES!!!
 
-`The bug (the code fix needed):   
+---
+`
+The bug (the code fix needed):   
 static int[] reversed(int[] arr) {
     int[] newArray = new int[arr.length];
     for(int i = 0; i < arr.length; i += 1) {
@@ -92,7 +96,9 @@ static int[] reversed(int[] arr) {
     `
     
   As you see here newArray with reverse numbers is returned instead of old array arr and the newArray gets assigned to the value of the old array not vise versa.
+  
+  ---
 
 Then, explain the connection between the symptom and the bug. Why does the bug cause that particular symptom for that particular input?
-The right array wasn't being returned or assigned instead we were getting the empty array. The empty array is only the invese of an empty array and thus we had the bug where the inverse of the array I passed in did not match the one that was returned. 
+*The right array wasn't being returned or assigned instead we were getting the empty array. The empty array is only the invese of an empty array and thus we had the bug where the inverse of the array I passed in did not match the one that was returned.*
 
