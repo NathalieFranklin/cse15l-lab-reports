@@ -1,5 +1,62 @@
 # Lab Report 2
 **Part 1**
+Code:
+```
+import java.io.IOException;
+import java.net.URI;
+import java.util.*;
+
+class Handler implements URLHandler {
+    // The one bit of state on the server: a number that will be manipulated by
+    // various requests.
+    public ArrayList<String> enter =new ArrayList<String>();
+
+    public String handleRequest(URI url) {
+        public String prints =new String();
+        if (url.getPath().contains("/add")){
+
+            if (!enter.contains(url.getQuery().split("=")[1])) {
+                enter.add(url.getQuery().split("=")[1]);
+                return (url.getQuery().split("=")[1]);
+            }
+        }
+
+        else if (url.getPath().contains("/search" )) {
+                String val = url.getQuery().split("=")[1];
+                int num = 0;
+                for(int i =0; i< enter.size(); i++){
+                    
+                    if(enter.get(i).contains(val)){
+                        num =num+1;
+                        prints = prints +" "  + enter.get(i);
+                    }
+                }
+                return(prints);
+
+        }else {
+            System.out.println("Path: " + url.getPath());
+        
+        }
+        return "Oooops";
+    
+    
+}
+}
+class SearchEngine{
+    public static void main(String[] args) throws IOException {
+        if(args.length == 0){
+            System.out.println("Missing port number! Try any number between 1024 to 49151");
+            return;
+        }
+
+        int port = Integer.parseInt(args[0]);
+
+        Server.start(port, new Handler());
+    }
+}
+
+```
+
 1. Add apple: 
 Which methods in your code are called? 
 *My codes main method has called the the default URLHandler constructor and passed in an instance of it to Server classes start method where the handleRequest(URI url)  method gets called.*
