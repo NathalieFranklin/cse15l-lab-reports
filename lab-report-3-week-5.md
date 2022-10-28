@@ -298,7 +298,8 @@ cs15lfa22es@ieng6-201]:technical:183$ grep -v "the"  911report/chapter-10.txt
                 logistics, and communications.
 
                 Islamist terrorism became a different kind of struggle.
-                ```
+                
+```
                 
 ### grep -i
 The -i flag for grep will help metigate the capital The capital "The" we encounter when we tried to skip all the lines with "the" in ourprevious command. Don't believe try to find a "the" in the output below. That is because -i will ignore the case. This helps when you don't want to type out every case version for every thing you want to search. 
@@ -540,4 +541,225 @@ The -i flag for grep will help metigate the capital The capital "The" we encount
                 logistics, and communications.
 
                 Islamist terrorism became a different kind of struggle.
+               
+```
+---
+---
+
+## less
+
+# less -n
+ Unlike before -n flag in less removes the numbers that track the lines. Though this might seem counterintuitive at first, it helps declutter the terminal and help people who find the numbers distracting.
+``` 
+less -n 911report/chapter-10.txt
+   WARTIME
+            After the attacks had occurred, while crisis managers were still sorting out a number
+                of unnerving false alarms, Air Force One flew to Barksdale Air Force Base in
+                Louisiana. One of these alarms was of a reported threat against Air Force One
+                itself, a threat eventually run down to a misunderstood communication in the hectic
+                White House Situation Room that morning.
+
+            While the plan at the elementary school had been to return to Washington, by the time
+                Air Force One was airborne at 9:55 A.M. the Secret Service, the President's
+                advisers, and Vice President Cheney were strongly advising against it. President
+                Bush reluctantly acceded to this advice and, at about 10:10, Air Force One changed
+                course and began heading due west. The immediate objective was to find a safe
+                location-not too far away-where the President could land and speak to the American
+                people. The Secret Service was also interested in refueling the aircraft and paring
+                down the size of the traveling party. The President's military aide, an Air Force
+                officer, quickly researched the options and, sometime around 10:20, identified
+                Barksdale Air Force Base as an appropriate interim destination.
+
+            When Air Force One landed at Barksdale at about 11:45, personnel from the local
+                Secret Service office were still en route to the airfield. The motorcade consisted
+                of a military police lead vehicle and a van; the proposed briefing theater had no
+                phones or electrical outlets. Staff scrambled to prepare another room for the
+                President's remarks, while the lead Secret Service agent reviewed the security
+                situation with superiors in Washington. The President completed his statement, which
+                for security reasons was taped and not broadcast live, and the traveling party
+                returned to Air Force One. The next destination was discussed: once again the Secret
+                Service recommended against returning to Washington, and the Vice President agreed.
+                Offutt Air Force Base in Nebraska was chosen because of its elaborate command and
+                control facilities, and because it could accommodate overnight lodging for 50
+                persons. The Secret Service wanted a place where the President could spend several
+                days, if necessary.
+
+            Air Force One arrived at Offutt at 2:50 P.M. At about 3:15, President Bush met with
+                his principal advisers through a secure video teleconference.
+
+            Rice said President Bush began the meeting with the words, "We're at war," and that Director of Central Intelligence George Tenet said
+                the agency was still assessing who was responsible, but the early signs all pointed
+                to al Qaeda.6That evening the Deputies Committee returned to the pending
+                presidential directive they had labored over during the summer.
+
+            The secretary of defense directed the nation's armed forces to Defense Condition 3,
+                an increased state of military readiness.
+
+            For the first time in history, all nonemergency civilian aircraft in the United
+                States were grounded, stranding tens of thousands of passengers across the country.
+                Contingency plans for the continuity of government and the evacuation of leaders had
+                been implemented. 9 The Pentagon had been struck; the White House or the Capitol had
+                narrowly escaped direct attack. Extraordinary security precautions were put in place
+                at the nation's borders and ports.
+            In the late afternoon, the President overruled his aides' continuing reluctance to
+            
+            
+```
+---
+
+# less - p 
+The falg -p when fallowed with a search word will start at the line that has the first instance of that word in the text file. This is very helpful when you are intrsted in a certain section or definition because it prevenets time waisting through searchig what you really want. As you can see below the first line contains the word plane which is my search word.
+
+```
+less -p plane  911report/chapter-10.txt
+ 1995 Manila air plot in crashing an explosives-laden plane into CIA headquarters,
+                and about information from a foreign government regarding Iraqis' involvement in the
+                attempted hijacking of a Gulf Air flight. Given this background, he wondered why so
+                little thought had been devoted to the danger of suicide pilots, seeing a "failure
+                of imagination" and a mind-set that dismissed possibilities.
+
+            On September 19, Rumsfeld offered several thoughts for his commanders as they worked
+                on their contingency plans. Though he emphasized the worldwide nature of the
+                conflict, the references to specific enemies or regions named only the Taliban, al
+                Qaeda, and Afghanistan.
+
+            Shelton told us the administration reviewed all the Pentagon's war plans and
+                challenged certain assumptions underlying them, as any prudent organization or
+                leader should do.
+
+            General Tommy Franks, the commanding general of Central Command, recalled receiving
+                Rumsfeld's guidance that each regional commander should assess what these plans
+                meant for his area of responsibility. He knew he would soon be striking the Taliban
+                and al Qaeda in Afghanistan. But, he told us, he now wondered how that action was
+                connected to what might need to be done in Somalia, Yemen, or Iraq.
+
+            On September 20, President Bush met with British Prime Minister Tony Blair, and the
+                two leaders discussed the global conflict ahead. When Blair asked about Iraq, the
+                President replied that Iraq was not the immediate problem. Some members of his
+                administration, he commented, had expressed a different view, but he was the one
+                responsible for making the decisions.
+
+            Franks told us that he was pushing independently to do more robust planning on
+                military responses in Iraq during the summer before 9/11-a request President Bush
+                denied, arguing that the time was not right. (CENTCOM also began dusting off plans
+                for a full invasion of Iraq during this period, Franks said.) The CENTCOM commander
+                told us he renewed his appeal for further military planning to respond to Iraqi
+                moves shortly after 9/11, both because he personally felt that Iraq and al Qaeda
+                might be engaged in some form of collusion and because he worried that Saddam might
+                take advantage of the attacks to move against his internal enemies in the northern
+                or southern parts of Iraq, where the United States was flying regular missions to
+                enforce Iraqi no-fly zones. Franks said that President Bush again turned down the
+                    request.
+
+            Having issued directives to guide his administration's preparations for war, on
+                Thursday, September 20, President Bush addressed the nation before a joint session
+                of Congress." Tonight," he said, "we are a country awakened to danger." The President blamed al Qaeda for 9/11 and the 1998
+                embassy bombings and, for the first time, declared that al Qaeda was "responsible
+                for bombing the USS Cole." He reiterated the ultimatum
+                that had already been conveyed privately." The Taliban must act, and act
+                immediately," he said." They will hand over the terrorists, or they will share in
+                their fate." The President added that America's quarrel
+                was not with Islam: "The enemy of America is not our many Muslim friends; it is not
+                our many Arab friends. Our enemy is a radical network of terrorists, and every
+                government that supports them." Other regimes faced hard choices, he pointed out:
+                "Every nation, in every region, now has a decision to make: Either you are with us,
+                or you are with the terrorists."
+```
+---
+# less -m 
+The -m flag for less will display at the bottom left of the terminal how far along you are in the text by a percentage sign out of a 100%. This is very useful to keep track of how much reading is left so you can budget your time or prepare your self for a heavy text. While line numbers can help bookmark you don't know what line it is out of what until you scroll to the last line. 
+```
+ less -m 911report/chapter-10.txt
+     WARTIME
+            After the attacks had occurred, while crisis managers were still sorting out a number
+                of unnerving false alarms, Air Force One flew to Barksdale Air Force Base in
+                Louisiana. One of these alarms was of a reported threat against Air Force One
+                itself, a threat eventually run down to a misunderstood communication in the hectic
+                White House Situation Room that morning.
+
+            While the plan at the elementary school had been to return to Washington, by the time
+                Air Force One was airborne at 9:55 A.M. the Secret Service, the President's
+                advisers, and Vice President Cheney were strongly advising against it. President
+                Bush reluctantly acceded to this advice and, at about 10:10, Air Force One changed
+                course and began heading due west. The immediate objective was to find a safe
+                location-not too far away-where the President could land and speak to the American
+                people. The Secret Service was also interested in refueling the aircraft and paring
+                down the size of the traveling party. The President's military aide, an Air Force
+                officer, quickly researched the options and, sometime around 10:20, identified
+                Barksdale Air Force Base as an appropriate interim destination.
+
+            When Air Force One landed at Barksdale at about 11:45, personnel from the local
+                Secret Service office were still en route to the airfield. The motorcade consisted
+                of a military police lead vehicle and a van; the proposed briefing theater had no
+                phones or electrical outlets. Staff scrambled to prepare another room for the
+                President's remarks, while the lead Secret Service agent reviewed the security
+                situation with superiors in Washington. The President completed his statement, which
+                for security reasons was taped and not broadcast live, and the traveling party
+                returned to Air Force One. The next destination was discussed: once again the Secret
+                Service recommended against returning to Washington, and the Vice President agreed.
+                Offutt Air Force Base in Nebraska was chosen because of its elaborate command and
+                control facilities, and because it could accommodate overnight lodging for 50
+                persons. The Secret Service wanted a place where the President could spend several
+                days, if necessary.
+6%
+```
+
+---
+---
+
+## find
+# find -maxdepth 
+The -maxdepth flag is fallowed by a number telling the find command how deep to look for it's output paths. Sometimes to find is a couple of layers deep in a hundreds of layer of directories. Inorder not to be overwhelmed by child directories this can be quite useful to narrow doen the results.
+```
+find 911report -maxdepth 0
+911report
+```
+---
+
+# find path_type -f
+The path_type return paths only to either files when fallowed by -f or directories when fallowed by -d. This is usefull when you know that youre looking for files so paths ending in directories just cluter the command line.
+```
+technical:218$  find 911report -type f
+911report/chapter-1.txt
+911report/chapter-10.txt
+911report/chapter-11.txt
+911report/chapter-12.txt
+911report/chapter-13.1.txt
+911report/chapter-13.2.txt
+911report/chapter-13.3.txt
+911report/chapter-13.4.txt
+911report/chapter-13.5.txt
+911report/chapter-2.txt
+911report/chapter-3.txt
+911report/chapter-5.txt
+911report/chapter-6.txt
+911report/chapter-7.txt
+911report/chapter-8.txt
+911report/chapter-9.txt
+911report/preface.txt
+```
+---
+
+# find -mtime
+The -mtime helps us narrow down the files outputed due to the time they were last updated -mtime -2 ( less then 2 days ago) -mtime +2 (more then 2 days ago) -mtime 2(exactly 2 days ago). When we might have an ideo of when the document we searched for was made or used we can use this flag to help narrow down our search.
+```
+find  911report -mtime -2
+911report
+911report/chapter-1.txt
+911report/chapter-10.txt
+911report/chapter-11.txt
+911report/chapter-12.txt
+911report/chapter-13.1.txt
+911report/chapter-13.2.txt
+911report/chapter-13.3.txt
+911report/chapter-13.4.txt
+911report/chapter-13.5.txt
+911report/chapter-2.txt
+911report/chapter-3.txt
+911report/chapter-5.txt
+911report/chapter-6.txt
+911report/chapter-7.txt
+911report/chapter-8.txt
+911report/chapter-9.txt
+911report/preface.txt
 ```
