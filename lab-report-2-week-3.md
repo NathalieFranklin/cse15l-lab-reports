@@ -118,28 +118,7 @@ The failure-inducing input (the code of the test):
 	}
 ```
 ---
-
-The symptom (the failing test output):
-3) testReversed2(ArrayTests)
-arrays first differed at element [0]; expected:<4> but was:<0>
-        at org.junit.internal.ComparisonCriteria.arrayEquals(ComparisonCriteria.java:78)
-        at org.junit.internal.ComparisonCriteria.arrayEquals(ComparisonCriteria.java:28)
-        at org.junit.Assert.internalArrayEquals(Assert.java:534)
-        at org.junit.Assert.assertArrayEquals(Assert.java:418)
-        at org.junit.Assert.assertArrayEquals(Assert.java:429)
-        at ArrayTests.testReversed2(ArrayTests.java:28)
-        ... 32 trimmed
-Caused by: java.lang.AssertionError: expected:<4> but was:<0>
-        at org.junit.Assert.fail(Assert.java:89)
-        at org.junit.Assert.failNotEquals(Assert.java:835)
-        at org.junit.Assert.assertEquals(Assert.java:120)
-        at org.junit.Assert.assertEquals(Assert.java:146)
-        at org.junit.internal.ExactComparisonCriteria.assertElementsEqual(ExactComparisonCriteria.java:8)
-        at org.junit.internal.ComparisonCriteria.arrayEquals(ComparisonCriteria.java:76)
-        ... 38 more
-
-FAILURES!!!
-
+![image](error1.png)
 ---
 
 The bug (the code fix needed):   
@@ -181,18 +160,7 @@ public void testLinkedList() {
 
 The symptom (the failing test output): 
 ```
-JUnit version 4.13.2
-.E
-Time: 107.606
-There was 1 failure:
-1) testLinkedList(LinkedListTests)
-java.lang.OutOfMemoryError: Java heap space
-        at LinkedList.append(LinkedListExample.java:43)
-        at LinkedListTests.testLinkedList(LinkedListTests.java:10)
-
-FAILURES!!!
-Tests run: 1,  Failures: 1
-
+![image](error2.png)
 ---
 
 The bug (the code fix needed): 
