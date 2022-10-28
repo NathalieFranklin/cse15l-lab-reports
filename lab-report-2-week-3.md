@@ -118,7 +118,7 @@ The failure-inducing input (the code of the test):
 	}
 ```
 ---
-![image](error1.png)
+![image](errors1.png)
 ---
 
 The bug (the code fix needed):   
@@ -160,7 +160,7 @@ public void testLinkedList() {
 
 The symptom (the failing test output): 
 ```
-![image](error2.png)
+![image](errors2.png)
 ---
 
 The bug (the code fix needed): 
