@@ -53,3 +53,13 @@ The . replaces the next instance of start just as we did before because by using
 
 ```
 ![image](part5.jpg)
+
+
+---
+
+
+**Part 2**
+
+First way attempt timed: 2 min 3 sec, second attemp 45 seconds. For me the first attempt took longer because I accidently was not scp from the right directory at the beginning. Also since I had a bit of practice with the second approach in part one it was easier to mechanically repeat out of memory. 
+1. I personnally still perfer the first way, I think since I am not as comfortable in vim it would under most circumstances take longer and I also find that I often accidently shift between modes and thus an waisting time on errores.
+2. I can see how the second approach is more reasonable when you might not have enough storage to always download interfaces such as visula studious and must use the command line to be more memory efficient. 
