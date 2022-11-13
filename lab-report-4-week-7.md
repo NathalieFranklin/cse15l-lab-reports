@@ -1,5 +1,5 @@
 # Part 1 #
-'''
+```
 1. /start
 2. <enter>
 3. cgn
@@ -14,4 +14,4 @@ total of 19 keystrokes
 
 /start
   
-'''
+```
