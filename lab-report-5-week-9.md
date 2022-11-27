@@ -60,22 +60,31 @@ echo "100% good job"
 Standard output | Standard error | Exit code 
 1. rm -rf student-submission
 Standard output | Standard error | Exit code : N/A|N/A|0
+
 2. git clone "$1" student-submission
 Standard output | Standard error | Exit code : N/A|Cloning into 'student-submission'...|0
+
 3.cp -r  lib student-submission/
 Standard output | Standard error | Exit code : N/A|N/A|0
+
 4.cp TestListExamples.java  student-submission/
 Standard output | Standard error | Exit code : N/A|N/A|0
+
 5.cd student-submission
 Standard output | Standard error | Exit code : N/A|N/A|0
+
 6.if [[ ! -e ListExamples.java ]]
 This if statement is true because the file is called ListMethods.java intstead of ListExamples.java 
 Standard output | Standard error | Exit code : N/A|N/A|0
+
 7. then                                                                                                                                                                  Standard output | Standard error | Exit code : N/A|N/A|0
+
 8.echo "compiliation error file might not be properly named or unneccerly embedded" 
 Standard output | Standard error | Exit code : N/A|N/A|0
+
 9.echo "score 0"
 Standard output | Standard error | Exit code : N/A|N/A|0
+
 10.exit 1 
 Standard output | Standard error | Exit code : N/A|N/A|0
 
